@@ -28,7 +28,7 @@ Before running the pipeline, ensure the following are configured in your environ
 
 ### 1. Self-Hosted Build Agent (Required)
 - This pipeline is designed to run on a **Self-Hosted Agent** (configured in the `Default` pool).
-- Ensure your agent has `Terraform`, `Python/Pip`,`tar` and `Curl` installed.
+- Ensure your agent has `Python/Pip`,`tar` and `Curl` installed.
 - *Why?* Enterprise environments use self-hosted agents for security and to keep traffic within a private network.
 
 ### 2. Azure Backend State
