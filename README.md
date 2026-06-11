@@ -1,3 +1,5 @@
+Developed with ❤️ by **Mahendra Kumar**
+
 # 🛡️ End-to-End-Azure-DevOps-IaC-Pipeline
 
 A professional-grade Infrastructure as Code (IaC) repository showcasing a **hardened, production-ready CI/CD lifecycle** for Azure Resource Group Governance using Terraform and Azure DevOps.
@@ -40,7 +42,10 @@ You must manually create the following resources to store the Terraform `.tfstat
 
 ### 3. Azure DevOps Configuration
 - **Service Connection**: Create an ARM Service Connection named **`Azure-Service-Connection`**.
-- **Environment**: Create an ADO Environment named **`production-gate`** and add a **Manual Approval** check.
+- **Identity Management**: Create or identify an **Azure Service Principal**.
+- **Access Control (IAM)**: 
+    *   **Subscription Level**: Assign the `Contributor` or `Owner` role.
+    *   **Storage Account Level**: Assign the **`Storage Blob Data Contributor`** role (Required for Terraform state management).
 - **Infracost API Key**: Sign up at Infracost.io and add the key as a secret variable named **`INFRACOST_API_KEY`** in your pipeline.
 
 ---
@@ -59,6 +64,6 @@ You must manually create the following resources to store the Terraform `.tfstat
 `Init` ➔ `Fmt` ➔ `Validate` ➔ `Security Scan (TFSec/Checkov)` ➔ `Plan` ➔ `Compliance Check (Terrascan)` ➔ `Cost Estimate (Infracost)` ➔ `Manual Approval` ➔ `Apply`
 
 ---
-**Author:** Mahendra kumar
+## 👨‍💻 Author
+**Mahendra Kumar** 
 **Focus:** Cloud Infrastructure | DevSecOps | SRE  
-*Showcased for LinkedIn Portfolio - 2024*
